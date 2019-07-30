@@ -12,10 +12,12 @@ class FXOpenService {
         return await res.json();
     }
 
-    async getAvailablePublicSymbols() {
-        const res = await this.getResource('/api/v1/public/symbol/');
+    async getAvailableSymbols() {
+        return await this.getResource(`/api/v1/public/symbol/`);
+    }
 
-        return res;
+    async getFilteredLevel2Ticks(filter) {
+        return await this.getResource(`/api/v1/public/symbol/${filter}`);
     }
 }
 
