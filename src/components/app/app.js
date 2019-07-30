@@ -7,7 +7,7 @@ class App extends Component {
     componentDidMount = () => {
         const { fxopenService } = this.props;
 
-        fxopenService.getAvailablePublicSymbols()
+        fxopenService.getAvailableSymbols()
             .then(symbols => console.log(symbols));
     }
 
