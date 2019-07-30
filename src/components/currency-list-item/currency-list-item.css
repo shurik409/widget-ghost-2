@@ -1,0 +1,7 @@
+.currency-list-item {
+    display: flex;
+}
+
+.currency-list-item .currency-list-item__text {
+    font-weight: bold;
+}
