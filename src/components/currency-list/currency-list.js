@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withFXOpenService } from '../hoc';
+import CurrencyListItem from '../currency-list-item';
 
 export class CurrencyList extends Component {
 
@@ -20,11 +21,14 @@ export class CurrencyList extends Component {
         console.log(symbols);
         
         return (
-            <select>
-                {symbols.map(({ Symbol: symbol }) => {
-                    return <option key={symbol}>{symbol}</option>
-                })}
-            </select>
+            <div>
+                {symbols.map(({ Symbol: symbol, MarginCurrency, ProfitCurrency }) => (
+                    <CurrencyListItem
+                        symbol={symbol} 
+                        marginCurrencyName={MarginCurrency}
+                        profitCurrencyName={ProfitCurrency} />
+                ))}
+            </div>
         );
     }
 }
