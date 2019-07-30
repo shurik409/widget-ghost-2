@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
 import './app.css';
-import { withFXOpenService } from '../hoc';
+import CurrencyList from '../currency-list';
 
 class App extends Component {
-
-    componentDidMount = () => {
-        const { fxopenService } = this.props;
-
-        fxopenService.getAvailableSymbols()
-            .then(symbols => console.log(symbols));
-    }
-
     render = () => {
         return (
-            <div>App</div>
+            <CurrencyList />
         );
     };
 }
 
-export default withFXOpenService()(App);
+export default App;
