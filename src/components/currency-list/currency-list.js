@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withFXOpenService } from '../hoc';
+import { withСryptoService } from '../hoc';
 import CurrencyListItem from '../currency-list-item';
 
 export class CurrencyList extends Component {
@@ -9,9 +9,9 @@ export class CurrencyList extends Component {
     };
 
     componentDidMount = () => {
-        const { fxopenService } = this.props;
+        const { cryptoService } = this.props;
 
-        fxopenService.getAvailableSymbols()
+        cryptoService.getAvailableSymbols()
             .then(symbols => this.setState({ symbols }));
     }
 
@@ -32,4 +32,4 @@ export class CurrencyList extends Component {
         );
     }
 }
-export default withFXOpenService()(CurrencyList);
+export default withСryptoService()(CurrencyList);

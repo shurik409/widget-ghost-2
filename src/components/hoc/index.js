@@ -1,5 +1,5 @@
-import withFXOpenService from './with-fxopen-service';
+import withСryptoService from './with-crypto-service';
 
 export {
-    withFXOpenService
+    withСryptoService
 }
