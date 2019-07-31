@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './components/app';
-import FXOpenService from './services/fxopen-service';
-import { FXOpenServiceProvider } from './components/fxopen-service-context';
+import CryptoService from './services/crypto-service';
+import { СryptoServiceProvider } from './components/crypto-service-context';
 
-const fxopenService = new FXOpenService();
+const cryptoService = new CryptoService();
 
 ReactDOM.render(
-    <FXOpenServiceProvider value={fxopenService}>
+    <СryptoServiceProvider value={cryptoService}>
         <App />
-    </FXOpenServiceProvider>,
+    </СryptoServiceProvider>,
     document.getElementById('root')
 );
