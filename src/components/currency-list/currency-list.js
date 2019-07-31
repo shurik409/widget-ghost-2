@@ -3,24 +3,24 @@ import { withFXOpenService } from '../hoc';
 
 export class CurrencyList extends Component {
 
-    state = {
-        symbols: []
-    };
+    // state = {
+    //     symbols: []
+    // };
 
-    componentDidMount = () => {
-        const { fxopenService } = this.props;
+    // componentDidMount = () => {
+    //     const { fxopenService } = this.props;
 
-        fxopenService.getAvailableSymbols()
-            .then(symbols => this.setState({ symbols }));
-    }
+    //     fxopenService.getAvailableSymbols()
+    //         .then(symbols => this.setState({ symbols }));
+    // }
 
     render = () => {
-        const { symbols } = this.state;
+        const { symbols, selectOtherSymbolCallback } = this.props;
 
         console.log(symbols);
         
         return (
-            <select>
+            <select onChange={ selectOtherSymbolCallback }>
                 {symbols.map(({ Symbol: symbol }) => {
                     return <option key={symbol}>{symbol}</option>
                 })}

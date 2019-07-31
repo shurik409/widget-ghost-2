@@ -1,0 +1,14 @@
+.price-boxes {
+    display: flex;
+}
+
+.box {
+    margin: 10px;
+    width: 250px;
+    height: 150px;
+}
+
+.ask-box {
+    background-color: rgba(30, 187, 132, 0.3);
+    text-align: right;
+}
