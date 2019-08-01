@@ -9,22 +9,6 @@ export class Table extends PureComponent {
         askBid: null
     }
 
-    // getLastBidAsk = async () => {
-    //     const { fxopenService, currentSymbol } = this.props;
-    //     let data = await fxopenService.getLevel2FilterBySymbol(currentSymbol, 5);
-        
-    //     console.log(data);
-    //     this.setState({askBid: data[0]})
-    // }
-
-    // componentDidUpdate = (prevProps) => {
-    //     const { currentSymbol } = this.props;
-
-    //     if(prevProps.currentSymbol !== currentSymbol){
-    //         this.getLastBidAsk();
-    //     }
-    // }
-
     render = () => {
         const { lastBidAsk } = this.props;
         // console.log(askBid);
@@ -32,7 +16,7 @@ export class Table extends PureComponent {
             <>
             {
                 lastBidAsk && 
-                    <table>
+                    <table className='col-md-12'>
                         {
                             lastBidAsk[0].Bids.map((data, index) => 
                                 <tr>

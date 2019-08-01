@@ -41,7 +41,7 @@ export class Chart extends PureComponent {
             chartData && <div>
                 {
                     spread && 
-                    <XYPlot  width={400} height={100}>
+                    <XYPlot  width={185} height={20} margin={{left: 0, right: 0, top: 0, bottom: 0}}>
                         <LineSeries 
                             data={spread.map(value => ({
                                 x: value.time,
@@ -50,6 +50,7 @@ export class Chart extends PureComponent {
                             opacity={1}
                             stroke="#1ebb84"
                             strokeStyle="solid"
+                            strokeWidth={1}
                         />
                 </XYPlot>
                 }

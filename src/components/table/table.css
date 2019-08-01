@@ -1,8 +1,22 @@
+@import '../../fonts/font-face.css';
+
 td {
     text-align: center;
-    padding: 5px 10px
+    padding: 5px 10px;
+    font-family: 'DIN Pro';
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    color: #363940;
 }
 
-.bold-row {
+.bold-row > td {
     font-weight: bold;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.86;
+    letter-spacing: normal;
+    color: #0c0c0d;
 }

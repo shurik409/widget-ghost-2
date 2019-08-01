@@ -1,0 +1,33 @@
+@import '../../fonts/font-face.css';
+@import '../../../node_modules/bootstrap-4-grid/css/grid.css';
+
+body {
+    font-family: 'DIN Pro';
+}
+
+.widget-header {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0; 
+}
+
+.widget-wrapper {
+    width: 33vw;
+}
+
+select {
+    border-radius: 0;
+    border: 0;
+    background-color: #fff;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    background: url('../../img/arrow-point-to-right.svg') no-repeat right;
+    background-size: 13%;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Museo Sans Cyrl 500';
+    width: 95px;
+    height: 20px;
+    background-position-y: 8px;
+}

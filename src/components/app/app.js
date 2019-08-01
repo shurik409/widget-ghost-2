@@ -54,10 +54,24 @@ export class App extends Component {
 
         return (
             <>
-                <CurrencyList symbols={symbols} selectOtherSymbolCallback={this.selectOtherSymbol}/>
-                <Chart currentSymbol={currentSymbol} chartData={chartData}/>
-                <Table currentSymbol={currentSymbol} lastBidAsk={lastBidAsk}/>
-                <PriceBoxes currentSymbol={currentSymbol} lastBidAsk={lastBidAsk}/>
+                <div className='container'>
+                    <div className="row justify-content-center">
+                        <div className="col-md-4 ">
+                            <div className='row mt-3 mb-3'>
+                                <div className='col-md-6'>
+                                    <CurrencyList symbols={symbols} selectOtherSymbolCallback={this.selectOtherSymbol}/>
+                                </div>
+                                <div className='col-md-6'>
+                                    <Chart currentSymbol={currentSymbol} chartData={chartData}/>
+                                </div>
+                            </div>
+                            <PriceBoxes currentSymbol={currentSymbol} lastBidAsk={lastBidAsk}/>
+                            <div className="row">
+                                <Table currentSymbol={currentSymbol} lastBidAsk={lastBidAsk}/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </>
         );
     };
