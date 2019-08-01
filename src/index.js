@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 
 import App from './components/app';
 import CryptoService from './services/crypto-service';
-import { СryptoServiceProvider } from './components/crypto-service-context';
+import { CryptoServiceProvider } from './components/crypto-service-context';
 
 const cryptoService = new CryptoService();
 
 ReactDOM.render(
-    <СryptoServiceProvider value={cryptoService}>
+    <CryptoServiceProvider value={cryptoService}>
         <App />
-    </СryptoServiceProvider>,
+    </CryptoServiceProvider>,
     document.getElementById('root')
 );

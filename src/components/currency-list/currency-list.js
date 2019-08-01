@@ -1,35 +1,31 @@
 import React, { Component } from 'react';
-import { withСryptoService } from '../hoc';
-import CurrencyListItem from '../currency-list-item';
+import { withCryptoService } from '../hoc';
 
 export class CurrencyList extends Component {
 
-    state = {
-        symbols: []
-    };
+    // state = {
+    //     symbols: []
+    // };
 
-    componentDidMount = () => {
-        const { cryptoService } = this.props;
+    // componentDidMount = () => {
+    //     const { fxopenService } = this.props;
 
-        cryptoService.getAvailableSymbols()
-            .then(symbols => this.setState({ symbols }));
-    }
+    //     fxopenService.getAvailableSymbols()
+    //         .then(symbols => this.setState({ symbols }));
+    // }
 
     render = () => {
-        const { symbols } = this.state;
+        const { symbols, selectOtherSymbolCallback } = this.props;
 
         console.log(symbols);
         
         return (
-            <div>
-                {symbols.map(({ Symbol: symbol, MarginCurrency, ProfitCurrency }) => (
-                    <CurrencyListItem
-                        symbol={symbol} 
-                        marginCurrencyName={MarginCurrency}
-                        profitCurrencyName={ProfitCurrency} />
-                ))}
-            </div>
+            <select onChange={ selectOtherSymbolCallback }>
+                {symbols.map(({ Symbol: symbol }) => {
+                    return <option key={symbol}>{symbol}</option>
+                })}
+            </select>
         );
     }
 }
-export default withСryptoService()(CurrencyList);
+export default withCryptoService()(CurrencyList);

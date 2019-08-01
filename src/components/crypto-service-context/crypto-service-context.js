@@ -1,11 +1,11 @@
 import React from 'react';
 
 const {
-    Provider: СryptoServiceProvider,
-    Consumer: СryptoServiceConsumer
+    Provider: CryptoServiceProvider,
+    Consumer: CryptoServiceConsumer
 } = React.createContext();
 
 export {
-    СryptoServiceProvider,
-    СryptoServiceConsumer
+    CryptoServiceProvider,
+    CryptoServiceConsumer
 };

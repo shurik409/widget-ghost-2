@@ -1,5 +1,5 @@
-import withСryptoService from './with-crypto-service';
+import withCryptoService from './with-crypto-service';
 
 export {
-    withСryptoService
+    withCryptoService
 }

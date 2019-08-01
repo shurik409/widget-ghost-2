@@ -19,6 +19,14 @@ class СryptoService {
     async getFilteredLevel2Ticks(filter) {
         return await this.getResource(`/api/v1/public/symbol/${filter}`);
     }
+
+    async getLevel2FilterBySymbol(symbol, depth) {
+        return await this.getResource(`/api/v1/public/level2/${symbol}?depth=${depth}`);
+    }
+
+    async getQuoutehistoryBySymbol(symbol, count) {
+        return await this.getResource(`/api/v1/public/quotehistory/${symbol}/level2?timestamp=${Math.floor(Date.now() / 1000)}&count=${count}`);
+    }
 }
 
 export default СryptoService;

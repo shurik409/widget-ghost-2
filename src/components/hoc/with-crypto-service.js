@@ -1,14 +1,14 @@
 import React from 'react';
-import { СryptoServiceConsumer } from '../crypto-service-context';
+import { CryptoServiceConsumer } from '../crypto-service-context';
 
 const withCryptoService = () => (Wrapper) => {
     return (props) => {
         return (
-            <СryptoServiceConsumer>
+            <CryptoServiceConsumer>
                 {(cryptoService) => {
                     return <Wrapper {...props} cryptoService={cryptoService} />
                 }}
-            </СryptoServiceConsumer>
+            </CryptoServiceConsumer>
         );
     };
 };

@@ -1,9 +1,9 @@
 import {
-    СryptoServiceProvider,
-    СryptoServiceConsumer
+    CryptoServiceProvider,
+    CryptoServiceConsumer
 } from './crypto-service-context';
 
 export {
-    СryptoServiceProvider,
-    СryptoServiceConsumer
+    CryptoServiceProvider,
+    CryptoServiceConsumer
 };
