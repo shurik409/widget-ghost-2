@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import './price-boxes.css';
-import { withFXOpenService } from '../hoc';
+import { withCryptoService } from '../hoc';
 
 
 export class PriceBoxes extends PureComponent {
@@ -31,4 +31,4 @@ export class PriceBoxes extends PureComponent {
 
 }
 
-export default withFXOpenService()(PriceBoxes);
+export default withCryptoService()(PriceBoxes);

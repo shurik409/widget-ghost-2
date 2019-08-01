@@ -4,7 +4,7 @@ import CurrencyList from '../currency-list';
 import Chart from '../chart';
 import Table from '../table';
 import PriceBoxes from '../price-boxes';
-import { withFXOpenService } from '../hoc';
+import { withCryptoService } from '../hoc';
 
 export class App extends Component {
     state = {
@@ -15,26 +15,26 @@ export class App extends Component {
     };
 
     getSymbols = async () => {
-        const { fxopenService } = this.props;
+        const { cryptoService } = this.props;
 
-        let data = await fxopenService.getAvailableSymbols();
+        let data = await cryptoService.getAvailableSymbols();
         this.setState({ symbols: data, currentSymbol: data[0].Symbol })
         this.getChartData(data[0].Symbol);
         this.getlastBidAsk(data[0].Symbol);
     }
 
     getChartData = async (symbol) => {
-        const { fxopenService } = this.props;
+        const { cryptoService } = this.props;
         
-        let data = await fxopenService.getQuoutehistoryBySymbol(symbol, 100);
+        let data = await cryptoService.getQuoutehistoryBySymbol(symbol, 100);
 
         this.setState({ chartData: data })
     }
 
     getlastBidAsk = async (symbol) => {
-        const { fxopenService } = this.props;
+        const { cryptoService } = this.props;
         
-        let data = await fxopenService.getLevel2FilterBySymbol(symbol, 5);
+        let data = await cryptoService.getLevel2FilterBySymbol(symbol, 5);
 
         this.setState({ lastBidAsk: data })
     }
@@ -77,4 +77,4 @@ export class App extends Component {
     };
 }
 
-export default withFXOpenService()(App);
+export default withCryptoService()(App);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withFXOpenService } from '../hoc';
+import { withCryptoService } from '../hoc';
 
 export class CurrencyList extends Component {
 
@@ -28,4 +28,4 @@ export class CurrencyList extends Component {
         );
     }
 }
-export default withFXOpenService()(CurrencyList);
+export default withCryptoService()(CurrencyList);

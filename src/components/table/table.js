@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import './table.css';
-import { withFXOpenService } from '../hoc';
+import { withCryptoService } from '../hoc';
 
 
 export class Table extends PureComponent {
@@ -40,4 +40,4 @@ export class Table extends PureComponent {
     }
 }
 
-export default withFXOpenService()(Table);
+export default withCryptoService()(Table);

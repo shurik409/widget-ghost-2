@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import './chart.css';
-import { withFXOpenService } from '../hoc';
+import { withCryptoService } from '../hoc';
 import { LineSeries, XYPlot } from 'react-vis';
 import '../../../node_modules/react-vis/dist/style.css';
 
@@ -59,4 +59,4 @@ export class Chart extends PureComponent {
     }
 }
 
-export default withFXOpenService()(Chart);
+export default withCryptoService()(Chart);

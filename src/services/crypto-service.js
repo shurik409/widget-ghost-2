@@ -1,4 +1,4 @@
-class FXOpenService {
+class СryptoService {
 
     _apiBase = 'https://cryptottlivewebapi.fxopen.net:8443/';
 
@@ -29,4 +29,4 @@ class FXOpenService {
     }
 }
 
-export default FXOpenService;
+export default СryptoService;
