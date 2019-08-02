@@ -57,8 +57,24 @@ export class App extends Component {
         return (
             <>
                 <div className='container'>
+                <div className='d-flex justify-content-center'>
+                        <div className='company'></div>
+                        <div className='company'></div>
+                        <div className='company'></div>
+                        <div className='company'></div>
+                    </div>
+                    <div className='d-flex justify-content-center'>
+                        <div className='account'></div>
+                        <div className='account'></div>
+                        <div className='account'></div>
+                        <div className='account'></div>
+                    </div>
                     <div className="row justify-content-center">
-                        <div className="col-md-4 ">
+                        <div className="col-md-4 left">
+                            <div className='left-block'></div>
+                            <div className='left-block'></div>
+                        </div>
+                        <div className="col-md-4">
                             <div className='row widget-header'>
                                 <div className='col-md-6 d-flex'>
                                     <div className='mr-2 d-flex'>
@@ -75,6 +91,11 @@ export class App extends Component {
                                 <Table currentSymbol={currentSymbol} lastBidAsk={lastBidAsk}/>
                             </div>
                         </div>
+                        <div className="col-md-4 right">
+                            <div className='right-block'></div>
+                            <div className='right-block'></div>
+                            <div className='right-block'></div>
+                        </div>
                     </div>
                 </div>
             </>
@@ -83,3 +104,6 @@ export class App extends Component {
 }
 
 export default withCryptoService()(App);
+/*
+
+*/

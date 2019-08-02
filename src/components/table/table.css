@@ -22,3 +22,7 @@ td {
     letter-spacing: normal;
     color: #0c0c0d;
 }
+
+.info-row {
+    border-bottom: solid #000 1px;
+}

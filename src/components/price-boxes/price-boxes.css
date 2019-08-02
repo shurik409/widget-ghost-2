@@ -61,6 +61,8 @@
     text-align: center;
     border: solid 0px;
     margin: 10px 0 0 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
 .box-green {
@@ -86,4 +88,8 @@
 
 .box-wrapper {
     position: relative;
+}
+
+.box-button:hover {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24),0 8px 25px 0 rgba(0,0,0,0.19);
 }

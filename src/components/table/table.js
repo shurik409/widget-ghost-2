@@ -20,7 +20,7 @@ export class Table extends PureComponent {
                         <tbody>
                             {
                                 lastBidAsk[0].Bids.map((data, index) => 
-                                    <tr key={index}>
+                                    <tr key={index} className='info-row'>
                                         <td>{data.Volume}</td>
                                         <td>{data.Price}</td>
                                         <td>{lastBidAsk[0].Asks[index].Price}</td>
