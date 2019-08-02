@@ -2,13 +2,15 @@
 
 td {
     text-align: center;
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
     font-family: 'DIN Pro';
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     color: #363940;
+    height: 26px;
+    margin: 2px;
 }
 
 .bold-row > td {

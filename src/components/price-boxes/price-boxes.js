@@ -7,7 +7,6 @@ export class PriceBoxes extends PureComponent {
 
     render = () => {
         const { lastBidAsk } = this.props;
-        console.log(123, lastBidAsk);
 
         return (
             lastBidAsk && 

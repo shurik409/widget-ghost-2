@@ -27,6 +27,7 @@ export class App extends Component {
         const { cryptoService } = this.props;
         
         let data = await cryptoService.getQuoutehistoryBySymbol(symbol, 100);
+        console.log(data);
 
         this.setState({ chartData: data })
     }

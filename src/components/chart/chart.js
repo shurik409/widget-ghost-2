@@ -22,6 +22,7 @@ export class Chart extends PureComponent {
                 }
             })
     
+            console.log(spread);
             this.setState({ chartData: chartData.Ticks, spread: spread })
         }
     }
