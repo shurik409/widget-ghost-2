@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './app.css';
 import CurrencyList from '../currency-list';
+import CurrencyIcon from '../currency-icon';
 import Chart from '../chart';
 import Table from '../table';
 import PriceBoxes from '../price-boxes';
@@ -58,8 +59,11 @@ export class App extends Component {
                 <div className='container'>
                     <div className="row justify-content-center">
                         <div className="col-md-4 ">
-                            <div className='row mt-3 mb-3'>
-                                <div className='col-md-6'>
+                            <div className='row widget-header'>
+                                <div className='col-md-6 d-flex'>
+                                    <div className='mr-2 d-flex'>
+                                        <CurrencyIcon symbol={currentSymbol}/>
+                                    </div>
                                     <CurrencyList symbols={symbols} selectOtherSymbolCallback={this.selectOtherSymbol}/>
                                 </div>
                                 <div className='col-md-6'>

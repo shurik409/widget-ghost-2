@@ -6,8 +6,6 @@ body {
 }
 
 .widget-header {
-    display: flex;
-    justify-content: space-around;
     margin: 40px 0; 
 }
 
