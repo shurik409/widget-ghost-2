@@ -11,6 +11,9 @@ export class PriceBoxes extends PureComponent {
         return (
             lastBidAsk && 
                 <div className='box-wrapper row mt-3 mb-3'>
+                    <div className='box-spread'>
+                        <p>{Math.round(Math.abs(lastBidAsk[0].BestAsk.Price - lastBidAsk[0].BestBid.Price) * 100 *10) / 10}</p>
+                    </div>
                     <div className='box bid-box col-md-6'>
                         <p className="box-name">BID</p>
                         <p className="box-price">{lastBidAsk[0].BestBid.Price}</p>
@@ -20,9 +23,6 @@ export class PriceBoxes extends PureComponent {
                         <p className="box-name">ASK</p>
                         <p className="box-price">{lastBidAsk[0].BestAsk.Price}</p>
                         <button className="box-button box-green">BUY</button>
-                    </div>
-                    <div className='box-spread'>
-                        <p>{Math.round(Math.abs(lastBidAsk[0].BestAsk.Price - lastBidAsk[0].BestBid.Price) * 100 *10) / 10}</p>
                     </div>
                 </div>
         )

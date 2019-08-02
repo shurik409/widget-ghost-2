@@ -104,6 +104,3 @@ export class App extends Component {
 }
 
 export default withCryptoService()(App);
-/*
-
-*/
