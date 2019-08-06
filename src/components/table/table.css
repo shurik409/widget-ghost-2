@@ -23,6 +23,23 @@ td {
     color: #0c0c0d;
 }
 
-.info-row {
+/* .info-row {
     border-bottom: solid #000 1px;
+} */
+
+/* .info-row {
+    position: relative;
+}
+
+.info-row ::after {
+    content:""; 
+    background: black; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    height: 1px; 
+    width: 10px;
+} */
+table {
+    border-collapse: collapse;
 }
