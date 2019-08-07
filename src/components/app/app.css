@@ -84,3 +84,28 @@ select {
     align-items: center;
     margin-top:74px;
 }
+
+.header-element {
+    min-width: 185px;
+    padding: 0;
+}
+
+.main-part {
+    width: 370px;
+    margin-top: 35px;
+}
+
+.arrow-image {
+    position: relative;
+    margin-top: 5px;
+    width: 768px;
+}
+
+.arrows-back {
+    position: absolute;
+}
+
+.left-arrow {
+    position: relative;
+    width: 65px;
+}

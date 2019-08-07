@@ -6,6 +6,8 @@ import Chart from '../chart';
 import Table from '../table';
 import PriceBoxes from '../price-boxes';
 import { withCryptoService } from '../hoc';
+import arrows from '../../img/arrows.svg';
+// import arrow from '../../img/arrow.svg';
 
 export class App extends Component {
     state = {
@@ -57,6 +59,7 @@ export class App extends Component {
         return (
             <>
                 <div className='container'>
+                    
                 <div className='d-flex justify-content-center'>
                         <div className='company'></div>
                         <div className='company'></div>
@@ -70,19 +73,26 @@ export class App extends Component {
                         <div className='account'></div>
                     </div>
                     <div className="row justify-content-center">
+                        <div className='arrow-image'>
+                            <img className='arrows-back' src={arrows} alt=''/>
+                        </div>
                         <div className="col-md-4 left">
-                            <div className='left-block'></div>
+                            <div className='left-block'>
+                                {/* <div className='left-arrow'>
+                                    <img src={arrow} alt=''/>
+                                </div> */}
+                            </div>
                             <div className='left-block'></div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="main-part">
                             <div className='row widget-header'>
-                                <div className='col-md-6 d-flex'>
+                                <div className='col-md-6 d-flex header-element'>
                                     <div className='mr-2 d-flex'>
                                         <CurrencyIcon symbol={currentSymbol}/>
                                     </div>
                                     <CurrencyList symbols={symbols} selectOtherSymbolCallback={this.selectOtherSymbol}/>
                                 </div>
-                                <div className='col-md-6'>
+                                <div className='col-md-6 header-element'>
                                     <Chart currentSymbol={currentSymbol} chartData={chartData}/>
                                 </div>
                             </div>
