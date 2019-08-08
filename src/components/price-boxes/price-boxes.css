@@ -8,6 +8,7 @@
     padding: 10px;
     /* width: 185px;
     height: 134px; */
+    height: 134px;
     border-radius: 2px;
 }
 
@@ -31,6 +32,7 @@
     font-stretch: normal;
     line-height: 1.33;
     letter-spacing: normal;
+    margin: 10px 0 0 0;
 }
 
 .box-price {
@@ -41,6 +43,7 @@
     font-stretch: normal;
     line-height: 1.15;
     letter-spacing: normal;
+    margin: 10px 0 0 0;
 
 }
 
@@ -57,6 +60,9 @@
     letter-spacing: normal;
     text-align: center;
     border: solid 0px;
+    margin: 10px 0 0 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
 .box-green {
@@ -82,4 +88,10 @@
 
 .box-wrapper {
     position: relative;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.box-button:hover {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24),0 8px 25px 0 rgba(0,0,0,0.19);
 }

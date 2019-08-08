@@ -6,8 +6,6 @@ body {
 }
 
 .widget-header {
-    display: flex;
-    justify-content: space-around;
     margin: 40px 0; 
 }
 
@@ -27,7 +25,87 @@ select {
     font-size: 20px;
     font-weight: 500;
     font-family: 'Museo Sans Cyrl 500';
-    width: 95px;
+    width: 105px;
     height: 20px;
     background-position-y: 8px;
+}
+
+.company {
+    height: 70px;
+    width: 170px;  
+    border-radius: 2px;
+    border: solid 2px #ebedf0;
+    margin: 10px 15px;
+}
+
+.account {
+    height: 40px;
+    width: 170px;
+    border-radius: 2px;
+    border: solid 2px #ebedf0;
+    background-color: #f5f6f7;
+    margin: 10px 15px;
+}
+
+.company-block {
+    padding: 0 15px;
+}
+
+.left-block {
+    width: 100px;
+    height: 166px;
+    border-radius: 2px;
+    border: solid 2px #ebedf0;
+    margin-left: 90px;
+    margin-top: 15px;
+
+}
+
+.right-block {
+    width: 100px;
+    height: 106px;
+    border-radius: 2px;
+    border: solid 2px #ebedf0;
+    margin-right: 90px;
+    margin-top: 15px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:74px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:74px;
+}
+
+.header-element {
+    min-width: 185px;
+    padding: 0;
+}
+
+.main-part {
+    width: 370px;
+    margin-top: 35px;
+}
+
+.arrow-image {
+    position: relative;
+    margin-top: 5px;
+    width: 768px;
+}
+
+.arrows-back {
+    position: absolute;
+}
+
+.left-arrow {
+    position: relative;
+    width: 65px;
 }

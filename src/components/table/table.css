@@ -2,13 +2,15 @@
 
 td {
     text-align: center;
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
     font-family: 'DIN Pro';
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     color: #363940;
+    height: 26px;
+    margin: 2px;
 }
 
 .bold-row > td {
@@ -19,4 +21,25 @@ td {
     line-height: 1.86;
     letter-spacing: normal;
     color: #0c0c0d;
+}
+
+/* .info-row {
+    border-bottom: solid #000 1px;
+} */
+
+/* .info-row {
+    position: relative;
+}
+
+.info-row ::after {
+    content:""; 
+    background: black; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    height: 1px; 
+    width: 10px;
+} */
+table {
+    border-collapse: collapse;
 }

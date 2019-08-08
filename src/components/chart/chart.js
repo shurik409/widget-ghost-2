@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
 import './chart.css';
 import { withCryptoService } from '../hoc';
-import { LineSeries, XYPlot } from 'react-vis';
+import { LineSeries, XYPlot, makeWidthFlexible } from 'react-vis';
 import '../../../node_modules/react-vis/dist/style.css';
+
+const FlexibleXYPlot = makeWidthFlexible(XYPlot);
 
 export class Chart extends PureComponent {
 
@@ -22,6 +24,7 @@ export class Chart extends PureComponent {
                 }
             })
     
+            console.log(spread);
             this.setState({ chartData: chartData.Ticks, spread: spread })
         }
     }
@@ -41,7 +44,7 @@ export class Chart extends PureComponent {
             chartData && <div>
                 {
                     spread && 
-                    <XYPlot  width={185} height={20} margin={{left: 0, right: 0, top: 0, bottom: 0}}>
+                    <FlexibleXYPlot  width={185} height={20} margin={{left: 0, right: 0, top: 0, bottom: 0}}>
                         <LineSeries 
                             data={spread.map(value => ({
                                 x: value.time,
@@ -52,7 +55,7 @@ export class Chart extends PureComponent {
                             strokeStyle="solid"
                             strokeWidth={1}
                         />
-                </XYPlot>
+                </FlexibleXYPlot>
                 }
             </div>
         )

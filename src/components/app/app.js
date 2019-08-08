@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import './app.css';
 import CurrencyList from '../currency-list';
+import CurrencyIcon from '../currency-icon';
 import Chart from '../chart';
 import Table from '../table';
 import PriceBoxes from '../price-boxes';
 import { withCryptoService } from '../hoc';
+import arrows from '../../img/arrows.svg';
+// import arrow from '../../img/arrow.svg';
 
 export class App extends Component {
     state = {
@@ -27,6 +30,7 @@ export class App extends Component {
         const { cryptoService } = this.props;
         
         let data = await cryptoService.getQuoutehistoryBySymbol(symbol, 100);
+        console.log(data);
 
         this.setState({ chartData: data })
     }
@@ -55,13 +59,40 @@ export class App extends Component {
         return (
             <>
                 <div className='container'>
+                    
+                <div className='d-flex justify-content-center'>
+                        <div className='company'></div>
+                        <div className='company'></div>
+                        <div className='company'></div>
+                        <div className='company'></div>
+                    </div>
+                    <div className='d-flex justify-content-center'>
+                        <div className='account'></div>
+                        <div className='account'></div>
+                        <div className='account'></div>
+                        <div className='account'></div>
+                    </div>
                     <div className="row justify-content-center">
-                        <div className="col-md-4 ">
-                            <div className='row mt-3 mb-3'>
-                                <div className='col-md-6'>
+                        <div className='arrow-image'>
+                            <img className='arrows-back' src={arrows} alt=''/>
+                        </div>
+                        <div className="col-md-4 left">
+                            <div className='left-block'>
+                                {/* <div className='left-arrow'>
+                                    <img src={arrow} alt=''/>
+                                </div> */}
+                            </div>
+                            <div className='left-block'></div>
+                        </div>
+                        <div className="main-part">
+                            <div className='row widget-header'>
+                                <div className='col-md-6 d-flex header-element'>
+                                    <div className='mr-2 d-flex'>
+                                        <CurrencyIcon symbol={currentSymbol}/>
+                                    </div>
                                     <CurrencyList symbols={symbols} selectOtherSymbolCallback={this.selectOtherSymbol}/>
                                 </div>
-                                <div className='col-md-6'>
+                                <div className='col-md-6 header-element'>
                                     <Chart currentSymbol={currentSymbol} chartData={chartData}/>
                                 </div>
                             </div>
@@ -69,6 +100,11 @@ export class App extends Component {
                             <div className="row">
                                 <Table currentSymbol={currentSymbol} lastBidAsk={lastBidAsk}/>
                             </div>
+                        </div>
+                        <div className="col-md-4 right">
+                            <div className='right-block'></div>
+                            <div className='right-block'></div>
+                            <div className='right-block'></div>
                         </div>
                     </div>
                 </div>

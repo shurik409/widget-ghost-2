@@ -4,7 +4,7 @@ class СryptoService {
 
     async getResource(url) {
         const res = await fetch(`${this._apiBase}${url}`);
-
+        console.log(`${this._apiBase}${url}`)
         if (!res.ok) {
             throw new Error(`Could not fetch ${url}, received ${res.status}`);
         }
@@ -25,7 +25,8 @@ class СryptoService {
     }
 
     async getQuoutehistoryBySymbol(symbol, count) {
-        return await this.getResource(`/api/v1/public/quotehistory/${symbol}/level2?timestamp=${Math.floor(Date.now() / 1000)}&count=${count}`);
+        const date = Date.now();
+        return await this.getResource(`/api/v1/public/quotehistory/${symbol}/level2?timestamp=${date}&count=${-count}`);
     }
 }
 
