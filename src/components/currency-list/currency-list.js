@@ -10,7 +10,7 @@ export class CurrencyList extends Component {
         return (
             <select onChange={ selectOtherSymbolCallback }>
                 {symbols.map(({ Symbol: symbol }) => {
-                    return !symbol.includes('_') ? <option key={symbol}>{symbol}</option> : <></>
+                    return !symbol.includes('_') && <option key={symbol}>{symbol}</option>
                 })}
             </select>
         );

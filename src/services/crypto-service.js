@@ -9,24 +9,24 @@ class СryptoService {
             throw new Error(`Could not fetch ${url}, received ${res.status}`);
         }
 
-        return await res.json();
+        return res.json();
     }
 
-    async getAvailableSymbols() {
-        return await this.getResource(`/api/v1/public/symbol/`);
+    getAvailableSymbols() {
+        return this.getResource(`/api/v1/public/symbol/`);
     }
 
-    async getFilteredLevel2Ticks(filter) {
-        return await this.getResource(`/api/v1/public/symbol/${filter}`);
+    getFilteredLevel2Ticks(filter) {
+        return this.getResource(`/api/v1/public/symbol/${filter}`);
     }
 
-    async getLevel2FilterBySymbol(symbol, depth) {
-        return await this.getResource(`/api/v1/public/level2/${symbol}?depth=${depth}`);
+    getLevel2FilterBySymbol(symbol, depth) {
+        return this.getResource(`/api/v1/public/level2/${symbol}?depth=${depth}`);
     }
 
-    async getQuoutehistoryBySymbol(symbol, count) {
+    getQuoutehistoryBySymbol(symbol, count) {
         const date = Date.now();
-        return await this.getResource(`/api/v1/public/quotehistory/${symbol}/level2?timestamp=${date}&count=${-count}`);
+        return this.getResource(`/api/v1/public/quotehistory/${symbol}/level2?timestamp=${date}&count=${-count}`);
     }
 }
 
