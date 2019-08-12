@@ -4,18 +4,11 @@ import {
     withCryptoService
 } from '../hoc';
 
-const Table = (props) => {
-    
-    if (!props.lastBidAsk) return null;
+const Table = ({lastBidAsk}) => {
 
-    const {
-        lastBidAsk: [{
-            Asks,
-            Bids,
-            BestBid,
-            BestAsk
-        }]
-    } = props;
+    if (!lastBidAsk) return null;
+
+    const [{ Asks, Bids, BestBid, BestAsk }] = lastBidAsk;
 
     return (
         <>
