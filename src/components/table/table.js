@@ -1,45 +1,37 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import './table.css';
-import { withCryptoService } from '../hoc';
+import {
+    withCryptoService
+} from '../hoc';
 
+const Table = ({lastBidAsk}) => {
 
-export class Table extends PureComponent {
+    if (!lastBidAsk) return null;
 
-    state = {
-        askBid: null
-    }
+    const [{ Asks, Bids, BestBid, BestAsk }] = lastBidAsk;
 
-    render = () => {
-        const { lastBidAsk } = this.props;
-        
-        return (
-            <>
-            {
-                lastBidAsk && 
-                    <table className='col-md-12'>
-                        <tbody>
-                            {
-                                lastBidAsk[0].Bids.map((data, index) => 
-                                    <tr key={index} className='info-row'>
-                                        <td>{data.Volume}</td>
-                                        <td>{data.Price}</td>
-                                        <td>{lastBidAsk[0].Asks[index].Price}</td>
-                                        <td>{lastBidAsk[0].Asks[index].Volume}</td>
-                                    </tr>
-                                )
-                            }
-                            <tr className='bold-row'>
-                                <td>{lastBidAsk[0].BestBid.Volume}</td>
-                                <td>{lastBidAsk[0].BestBid.Price}</td>
-                                <td>{lastBidAsk[0].BestAsk.Price}</td>
-                                <td>{lastBidAsk[0].BestAsk.Volume}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-            }
-            </>
-        )
-    }
+    return (
+        <table className='col-md-12'>
+            <tbody>
+                {
+                    Bids.map((data, index) => 
+                        <tr key={index} className='info-row'>
+                            <td>{data.Volume}</td>
+                            <td>{data.Price}</td>
+                            <td>{Asks[index].Price}</td>
+                            <td>{Asks[index].Volume}</td>
+                        </tr>
+                    )
+                }
+                <tr className='bold-row'>
+                    <td>{BestBid.Volume}</td>
+                    <td>{BestBid.Price}</td>
+                    <td>{BestAsk.Price}</td>
+                    <td>{BestAsk.Volume}</td>
+                </tr>
+            </tbody>
+        </table>
+    )
 }
 
 export default withCryptoService()(Table);
