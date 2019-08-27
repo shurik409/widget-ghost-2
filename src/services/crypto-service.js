@@ -36,20 +36,44 @@ class СryptoService {
     }
 
     getAvailableSymbols() {
-        return this.getResource(`/api/v1/symbol`);
+        try{
+            return this.getResource(`/api/v1/symbol`);
+        }
+        catch(e) {
+            console.error(e);
+            return {}
+        }
     }
 
     getFilteredLevel2Ticks(filter) {
-        return this.getResource(`/api/v1/symbol/${filter}`);
+        try{
+            return this.getResource(`/api/v1/symbol/${filter}`);
+        }
+        catch(e) {
+            console.error(e);
+            return {}
+        }
     }
 
     getLevel2FilterBySymbol(symbol, depth) {
-        return this.getResource(`/api/v1/level2/${symbol}?depth=${depth}`);
+        try{
+            return this.getResource(`/api/v1/level2/${symbol}?depth=${depth}`);
+        }
+        catch(e) {
+            console.error(e);
+            return {}
+        }
     }
 
     getQuoutehistoryBySymbol(symbol, count) {
-        const date = Date.now();
-        return this.getResource(`/api/v1/quotehistory/${symbol}/ticks?timestamp=${date}&count=${count}`);
+        try{
+            const date = Date.now();
+            return this.getResource(`/api/v1/quotehistory/${symbol}/ticks?timestamp=${date}&count=${count}`);
+        }
+        catch(e) {
+            console.error(e);
+            return {}
+        }
     }
 }
 
