@@ -11,7 +11,7 @@ export class CurrencyList extends Component {
 
     openList = () => {
         // this.setState((prevState) => ({currencyOpen: !prevState.currencyOpen}))
-        document.getElementById('currencySelect').classList.toggle('hidden')
+        // document.getElementById('currencySelect').classList.toggle('hidden')
     }
 
     selectCurrency = (symbol) => {
