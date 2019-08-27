@@ -38,11 +38,11 @@ export class CurrencyList extends Component {
                         <div className='selected-arrow'/>
                     </div>
                     <div className='menu hidden' id='currencySelect'>
-                        <div className='input-wrapper'>
+                        {/* <div className='input-wrapper'>
                             <div className='search-icon'/>
                             <input className='currency-input' placeholder='Type a currency'/>
                             <div className='search-cancel'/>
-                        </div>
+                        </div> */}
                         <ul>
                         {Array.from(symbols.values()).map(({ Symbol: symbol }) => {
                             return !symbol.includes('_') && 
