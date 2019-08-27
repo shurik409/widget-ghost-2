@@ -24,6 +24,17 @@
 
 }
 
+.ask-box .box-button {
+    background: #1ebb84;
+    color: #fff;
+}
+
+.bid-box .box-button {
+    border: solid 1px #adb0b4;
+    background: #fff;
+    color: #adb0b4;
+}
+
 .box-name {
     font-family: 'Museo Sans Cyrl 700';
     font-size: 12px;

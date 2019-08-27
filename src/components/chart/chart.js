@@ -14,17 +14,18 @@ export class Chart extends PureComponent {
     }
 
     getData = () => {
-        const { chartData } = this.props;
+        const { chartData, symbols, currentSymbol } = this.props;
+
+        
         
         if (chartData) {
             const spread = chartData.Ticks.map((data) => {
                 return {
-                    spread: Math.abs(data.BestAsk.Price - data.BestBid.Price) * 100,
+                    spread: Math.round(Math.abs(data.BestAsk.Price - data.BestBid.Price) * Math.pow(10, symbols.get(currentSymbol).Precision - 1 ) *10) / 10,
                     time: data.Timestamp
                 }
             });
     
-            console.log(spread);
             this.setState({ chartData: chartData.Ticks, spread: spread })
         }
     }
@@ -44,7 +45,7 @@ export class Chart extends PureComponent {
             chartData && spread && (           
                 <FlexibleXYPlot  width={185} height={20} margin={{left: 0, right: 0, top: 0, bottom: 0}}>
                     <LineSeries 
-                        data={spread.map(({time: x, value: y}) => ({x, y}))}
+                        data={spread.map(({time: x, spread: y}) => ({x, y}))}
                         opacity={1}
                         stroke="#1ebb84"
                         strokeStyle="solid"

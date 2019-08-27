@@ -9,7 +9,7 @@ td {
     font-stretch: normal;
     font-style: normal;
     color: #363940;
-    height: 26px;
+    height: 28px;
     margin: 2px;
 }
 
@@ -23,23 +23,28 @@ td {
     color: #0c0c0d;
 }
 
-/* .info-row {
-    border-bottom: solid #000 1px;
-} */
-
-/* .info-row {
-    position: relative;
+.bid-line {
+    border-bottom: 1px solid #e94241;
+    position: absolute;
+    right: 0;
+    margin-right: 1px;
 }
 
-.info-row ::after {
-    content:""; 
-    background: black; 
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    height: 1px; 
-    width: 10px;
-} */
+.ask-line {
+    border-bottom: 1px solid #1ebb84;
+    position: absolute;
+    left: 0;
+    margin-left: 1px;
+}
+
 table {
     border-collapse: collapse;
+}
+
+.volume {
+    width: 80px;
+}
+
+.price {
+    width: 105px;
 }

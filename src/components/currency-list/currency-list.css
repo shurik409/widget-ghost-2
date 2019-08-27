@@ -1,0 +1,95 @@
+/* .currency-selected:hover .menu {
+    display: block;
+} */
+
+.menu {
+    position: absolute;
+    border: 1px solid #000;
+    background: #fff;
+    width: 170px;
+}
+
+.currency-selected {
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Museo Sans Cyrl 500';
+}
+
+.currency-input {
+    width: 100px;
+    height: 25px;
+    border: none;
+    margin: 0 10px;
+}
+
+.input-wrapper {
+    height: 60px;
+    border-bottom: solid 1px #000;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 500px;
+    margin: 0;
+}
+
+.menu ul li {
+    display: flex;
+    /* width: 166px; */
+    height: 40px;
+    background: #fff;
+    margin: 0 10px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.menu ul li:hover {
+    background-color: #f0f0f5
+}l
+
+.currency-element {
+    margin: auto 0;
+}
+
+.search-icon {
+    width: 17px;
+    height: 17px;
+    background-image: url('../../img/search.svg');
+    background-size: cover;
+    margin-left: 5px;
+}
+
+.search-cancel {
+    width: 13px;
+    height: 13px;
+    
+    background-image: url('../../img/cancel.svg');
+    background-size: cover;
+}
+
+.selected-arrow {
+    width: 9px;
+    height: 5px;
+    margin-right: 17px; 
+    
+    background-image: url('../../img/arrow-point-to-right.svg');
+    background-size: cover;
+}
+
+.selected-info {
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.hidden {
+    display: none;
+}
