@@ -76,8 +76,6 @@ export class App extends Component {
     }
 
     hideAll = (e) => {
-        // if(e.target.id !== 'currencyList');
-        //     document.getElementById('currencySelect').classList.add('hidden');
     }
 
     render = () => {
