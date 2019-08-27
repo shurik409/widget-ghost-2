@@ -15,6 +15,7 @@ import curreneX from '../../img/3@3x.png';
 import integral from '../../img/integral@3x.png';
 import leftArrow from '../../img/arrow.svg';
 import downArrow from '../../img/arrow-down.svg';
+import downOrangeArrow from '../../img/arrow-down-orange.svg';
 
 const marketDepthPairList = ['EURUSD', 'USDJPY', 'GBPUSD', 'USDCHF', 'USDCAD', 'EURGBP', 'EURJPY', 'GBPJPY', 'USDRUB', 'BTCUSD'];
 
@@ -96,13 +97,13 @@ export class App extends Component {
                             <div className='company'>
                                 <img className='company-image' src={lMax} alt=''/>
                                 <div className='company-arrow'>
-                                    <img className='mirror' src={downArrow} alt=''/>
+                                    <img className='mirror' src={downOrangeArrow} alt=''/>
                                 </div>
                             </div>
                             <div className='company'>
                                 <img className='company-image' src={curreneX} alt=''/>
                                 <div className='company-arrow'>
-                                    <img className='mirror' src={downArrow} alt=''/>
+                                    <img className='mirror' src={downOrangeArrow} alt=''/>
                                 </div>
                             </div>
                             <div className='company' style={{marginRight: 0}}>
