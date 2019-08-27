@@ -8,11 +8,11 @@ export class PriceBoxes extends PureComponent {
     boxArray = [
         {
             label: 'BestBid',
-            title: 'Sell'
+            title: 'SELL'
         },
         {
             label: 'BestAsk',
-            title: 'Buy'
+            title: 'BUY'
         }
     ];
 
@@ -35,7 +35,7 @@ export class PriceBoxes extends PureComponent {
                 </div>
                 {this.boxArray.map( ({label, title}, index) => (
                     <div key={index} className={`box ${lastBid[label].Type.toLowerCase()}-box col-md-6`}>
-                        <p className="box-name">{lastBid[label].Type}</p>
+                        <p className="box-name">{lastBid[label].Type.toUpperCase()}</p>
                         <p className="box-price">{lastBid[label].Price}</p>
                         <button className="box-button">{title}</button>
                     </div>
