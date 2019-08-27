@@ -236,7 +236,7 @@ select {
 .left-arrow {
     position: absolute;
     height: 45px;
-    top: Calc(50% - 30px);
+    top: Calc(50% - 34px);
     left:100%;
     width: 70px;
 }

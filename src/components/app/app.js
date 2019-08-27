@@ -30,12 +30,11 @@ export class App extends Component {
     getSymbols = async () => {
         const { cryptoService } = this.props;
         const { currentSymbol } = this.state;
-        // let data = await cryptoService.getAvailableSymbols();
         let data = await cryptoService.getFilteredLevel2Ticks(marketDepthPairList.join('%2520'));
         let symbols = new Map();
+
         data.forEach(symbol => symbols.set(symbol.Symbol, symbol))
         this.setState({ symbols: symbols });
-        //, currentSymbol: data[0].Symbol 
         if(!currentSymbol)
             this.setState({currentSymbol: data[0].Symbol });
         await this.getInfo(currentSymbol || data[0].Symbol);
@@ -121,7 +120,6 @@ export class App extends Component {
                             <div className='arrow-image'>
                                 <img className='arrows-back' src={arrows} alt=''/>
                             </div>
-                            {/* col-md-4  */}
                             <div className='main-wrapper'>
                                 <div className="left">
                                     <div className='left-wrapper'>
@@ -160,9 +158,6 @@ export class App extends Component {
                                 <div className="main-part">
                                     <div className='row widget-header'>
                                         <div className='col-md-6 d-flex header-element'>
-                                            {/* <div className='mr-2 d-flex'>
-                                                <CurrencyIcon symbol={currentSymbol}/>
-                                            </div> */}
                                             <CurrencyList symbols={symbols} selectOtherSymbolCallback={this.selectOtherSymbol} currentSymbol={currentSymbol}/>
                                         </div>
                                         <div className='col-md-6 header-element'>
@@ -174,7 +169,6 @@ export class App extends Component {
                                         <Table symbols={symbols} currentSymbol={currentSymbol} lastBidAsk={lastBidAsk}/>
                                     </div>
                                 </div>
-                                {/* col-md-4  */}
                                 <div className="right">
                                     <div className='right-wrapper'>
                                         <div className='right-block'>
